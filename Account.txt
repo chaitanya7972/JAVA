@@ -1,0 +1,46 @@
+/* Question:
+
+Create a Java program for an ATM Account with an initial balance of ₹2500. Perform the following transactions:
+
+T1: Deposit ₹2500
+
+T2: Withdraw ₹1500
+
+T3: Transfer ₹1000
+
+
+Display the remaining money in the account after performing all the transactions. */
+
+
+
+
+
+
+public class Account {
+
+    public static void main(String[] args) {
+
+        double balance = 2500;
+        double t1;
+
+        double deposit = 2500;
+        balance = balance + deposit;
+        t1 = balance;
+
+        double t2;
+
+        double withdrawal = 1500;
+        balance = balance - withdrawal;
+        t2 = balance;
+
+        double t3;
+
+        double transfer = 1000;
+        balance = balance - transfer;
+        t3 = balance;
+
+        System.out.println(t1);
+        System.out.println(t2);
+        System.out.println(t3);
+    }
+}

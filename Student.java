@@ -1,0 +1,16 @@
+class Student {
+
+    public static void main(String[] args) {
+
+        String student1 = "Ram", student2 = "Raju";
+        int ramAge = 2, rajuAge = 3;
+        char gradeOfRam = 'A', gradeOfRaju = 'B';
+        double marksOfRam = 55.0, marksOfRaju = 78.9d;
+
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println(rajuAge);
+        System.out.println(ramAge);
+
+    }
+}

@@ -1,0 +1,16 @@
+class ReturnData{
+ public static void main(String [] args){
+
+
+int a=10;
+int b=20;
+int c=a+b;
+
+b+a;
+
+
+system.out.println(c);
+system.out.println(b+a);
+}
+
+}
