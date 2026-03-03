@@ -1,0 +1,40 @@
+public class IncrementDecrementExample2 {
+    public static void main(String[] args) {
+        
+        // --- First Question (Character Arithmetic) ---
+        char ch = 'A';  // ASCII 65
+        char ch1 = 'a'; // ASCII 97
+
+        // Java converts chars to ints for math: 65 + 98 - 97 - 98 + 67
+        System.out.println(ch++ + ++ch1 - --ch1 - ++ch1 + ++ch); 
+        
+        System.out.println(ch);  // Output: C
+        System.out.println(ch1); // Output: b
+
+        // --- Second Question (String Concatenation & Mixed Types) ---
+        int i = 10;
+        int j = 11;
+        double d = 20.0;
+        char c1 = 'A';
+
+        // NOTE: In Java, you cannot subtract (-) from a String. 
+        // To make the original logic "error-free", math must be grouped in parentheses ().
+        
+        System.out.println(i++ + "hello" + (j++ - -d + ++c1)); 
+
+        System.out.println("hello" + j-- + true);
+
+        System.out.println("hello" + c1++ + i++ + ++d);
+
+        System.out.println(i++ - c1++ - ++d);
+
+        System.out.println(i++ - c1++ - ++d);
+
+        // This last line in your notes causes a "Compile Time Error" (CTE) 
+        // because you cannot add a boolean to a number in Java.
+        // System.out.println(true + c1++ + ++d); 
+        
+        // To fix the CTE and still print the values:
+        System.out.println(true + "" + c1++ + ++d); 
+    }
+}

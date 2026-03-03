@@ -1,0 +1,8 @@
+// WAJP to find volume of cube &
+public class Volume_cube {
+    public static void main (String [] args) {
+        int side = side * side * side;
+        int side = 5;
+        System.out.println ("side * side * side" + " volume of cube");
+    }
+}

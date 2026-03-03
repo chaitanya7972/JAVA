@@ -1,0 +1,23 @@
+Language
+
+​Language is a medium which is use to comm$^n$ with human
+
+e.g.: English, Marathi, Hindi,
+
+​Programming Language.
+
+​It is a medium which is use to communicate between machines and humans.
+
+​Types of programming Language.
+
+​1) Low level programming Language.
+
+It is also called as machine level programming language. It is a language, which will be understandable by machine which is written in binary language (1,0).
+
+​2) Mid-level programming language.
+
+It is also called as assembly level programming language. It contains a nemonics, which is neither understable by machines or nor understandable by humans to understand this we have a s/w called as Assembler.
+
+​3) High level programming language.
+
+It is a medium which is written and simple english which is understandable by humans.
