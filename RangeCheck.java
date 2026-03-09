@@ -1,0 +1,25 @@
+/* Number in Range: Check if a number lies between 10 and 50 (inclusive). Pass or Fail: Check if a student passes (marks >= 35) or fails. */
+
+
+class RangeCheck {
+    public static void main(String[] args) {
+        int num = 25; // Try 5 or 60 to test
+
+        if (num >= 10 && num <= 50) {
+            System.out.println("The number is in range.");
+        } else {
+            System.out.println("The number is out of range.");
+        }
+
+        int marks = 40; 
+
+        if (marks >= 35) {
+            System.out.println("Status: PASS");
+        } else {
+            System.out.println("Status: FAIL");
+        }
+    }
+}
+
+
+   
