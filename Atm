@@ -1,0 +1,89 @@
+package UsingMethod;
+
+import java.util.Scanner;
+
+public class Atm {
+	public static void main(String[] a) {
+		Scanner s = new Scanner(System.in);
+		boolean flag = true;
+		double accountBalance = 0.0;
+		String cardNo = "SBI@123";
+		String pass = "SBISMith";
+
+		System.out.println("welcome to SBI ATM");
+
+		while (flag) {
+			System.out.println("\n1.Deposit \n2.Withdrawal \n3.Checkbalance \n4.GreenPin \n5.Exit");
+			int choice = s.nextInt();
+
+			switch (choice) {
+			case 1 -> {
+				System.out.println("Please wait while we validate");
+				System.out.println("Please enter the amount: ");
+				double amount = s.nextDouble();
+				deposit(amount);
+				accountBalance += amount;
+				System.out.println("Amount "+amount+" transferred successfully. Present balance is: " + accountBalance);
+			}
+			case 2 -> {
+				accountBalance = withDrawal(accountBalance);
+			}
+			case 3 -> {
+				checkBalance(accountBalance);
+			}
+			case 4 -> {
+				pass = greenpin(cardNo, pass, "NEW@123"); // Fixed variable name and method name
+				System.out.println("New Password set to: " + pass);
+			}
+			case 5 -> {
+				System.out.println("Thank you, visit again");
+				flag = false;
+			}
+			default -> System.out.println("Please enter a valid choice");
+			}
+		}
+
+	}
+
+	public static double withDrawal(double accountBalance) {
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter amount to withdraw: ");
+		double withdrawalAmount = s.nextDouble();
+		if (accountBalance >= withdrawalAmount) {
+			System.out.println("Withdrawing money...");
+			return accountBalance - withdrawalAmount;
+		} else {
+			System.out.println("Insufficient funds!");
+			return accountBalance;
+		}
+	}
+
+	public static double deposit(double amount) {
+		String output = validateUser("SBI@123", "SBISMith");
+		if (output == "user") {
+			return amount;
+		} else {
+			System.out.println("Validation failed.");
+			return 0;
+		}
+	}
+
+	public static void checkBalance(double accountBalance) {
+		System.out.println("Your current balance is: " + accountBalance);
+	}
+
+	public static String validateUser(String cardNo, String password) {
+		if (cardNo.equals("SBI@123") && password.equals("SBISMith")) {
+			return "user";
+		}
+		return null;
+	}
+
+	public static String greenpin(String cardNo, String oldpassword, String newpassword) {
+		if (cardNo.equals("SBI@123")) {
+			return newpassword;
+		}
+		return oldpassword;
+	}
+
+}
